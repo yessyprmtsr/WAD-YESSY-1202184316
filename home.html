@@ -23,48 +23,48 @@
               <a class="nav-link" href="profile.html">Profile</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Products</a>
+              <a class="nav-link" href="products.html">Products</a>
             </li>
           </ul>
         </div>
       </nav>
       <div class="container">
         <div class="row">
-            <div class="col-6 c-video">
+            <div class="col-lg-6 col-sm-12 c-video">
                 <iframe frameborder="0" height="50%" src="https://www.youtube.com/embed/AwMeQJ_u73I" width="100%"></iframe>
             </div>
-            <div class="col-6 c-registform">
+            <div class="col-lg-6 col-sm-12 c-registform">
             <h3>Customer Data Registration</h3>
             <form action="">
               <div class="form-group row">
-                <label for="nama" class="col-sm-4 col-form-label">Nama</label>
+                <label for="name" class="col-sm-4 col-form-label text-center">Name</label>
                 <div class="col-sm-6">
-                  <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama anda ..">
+                  <input type="text" class="form-control" id="name" name="name" placeholder="Your name ..">
                 </div>  
               </div>
               <div class="form-group row">
-                <label for="nohp" class="col-sm-4 col-form-label">Nomor Hp.</label>
+                <label for="phone" class="col-sm-4 col-form-label text-center">Phone</label>
                 <div class="col-sm-6">
-                  <input type="text" class="form-control" id="nohp" name="nohp">
+                  <input type="text" class="form-control" id="phone" name="phone">
                 </div>  
               </div>
               <div class="form-group row">
-                <label class="col-sm-4 col-form-label" for="alamat">Alamat</label>
+                <label class="col-sm-4 col-form-label text-center" for="address">Address</label>
                 <div class="col-sm-6">
-                    <textarea class="form-control" id="alamat" name="alamat" rows="3" ></textarea>
+                    <textarea class="form-control" id="address" name="address" rows="3" ></textarea>
                 </div>
               </div>
               <div class="form-group row">
-                <label class="col-sm-4 col-form-label" for="bayar">Pembayaran</label>
+                <label class="col-sm-4 col-form-label text-center" for="payment">Payment</label>
                 <div class="col-sm-6">
-                  <input type="radio" name="bayar" id="bayarCash" value="Cash">
+                  <input type="radio" name="pay" id="paymentCash" value="Cash">
                   <label for="bayarCash">Cash</label>
-                  <input type="radio" name="bayar" id="bayarCredit" value="Credit">
-                  <label for="bayarCredit">Credit</label>
+                  <input type="radio" name="pay" id="paymentCredit" value="Credit">
+                  <label for="paymentCredit">Credit</label>
                 </div>
             </div>
                 <div class="form-group row">
-                  <label class="col-sm-4 col-form-label">Kategori</label>
+                  <label class="col-sm-4 col-form-label text-center">Category</label>
                   <div class="col-sm-6">
                    <select class="form-control" for="kategori">
                     <option>Komputer</option>
@@ -75,14 +75,13 @@
               </div>
               <div class="form-group">
                 <div class="col-sm-12">
-                <button class="btn btn-primary form-control" type="submit">Kirim</button>
+                <button class="btn btn-primary" type="submit">Send</button>
               </div>
               </div>
         </div>
          </form>
       </div>
-     
+
       </div>
-      <script src="js/bootstrap.bundle.js"></script>
 </body>
 </html>

@@ -17,7 +17,19 @@ h3{
     text-align: center;
     padding-bottom: 20px;
 }
+h4{
+    text-align: center;
+}
+th{
+    text-align: center;
+}
+button{
+    width: 400px;
+    margin-top: 10px;
+    margin-left: 6%;
+}
 .c-registform{
+    justify-content: center;
     background-color: white;
 }
 .card-header{
