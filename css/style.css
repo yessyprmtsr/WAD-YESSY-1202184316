@@ -1,6 +1,9 @@
 body{
     background-color: whitesmoke;
 }
+.nav-item:hover{
+    background-color: darkgray;
+}
 .container{
     margin-top: 40px;
 }
@@ -18,7 +21,7 @@ h3{
     padding-bottom: 20px;
 }
 h4{
-    text-align: center;
+    margin-bottom: 5px;
 }
 th{
     text-align: center;
