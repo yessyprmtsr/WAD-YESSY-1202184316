@@ -3,7 +3,7 @@
 <head>
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <script type="text/javascript" src="js/bootstrap.js"></script>
 </head>
 <body>
@@ -28,5 +28,59 @@
           </ul>
         </div>
       </nav>
+      <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 c-video">
+                <iframe frameborder="0" height="50%" src="https://www.youtube.com/embed/AwMeQJ_u73I" width="100%"></iframe>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 c-registform">
+            <h3>Registrasi Data Pelanggan</h3>
+            <form action="">
+              <div class="form-group row">
+                <label for="nama" class="col-sm-4 col-form-label">Nama</label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama anda ..">
+                </div>  
+              </div>
+              <div class="form-group row">
+                <label for="nohp" class="col-sm-4 col-form-label">Nomor Hp.</label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" id="nohp" name="nohp">
+                </div>  
+              </div>
+              <div class="form-group row">
+                <label class="col-sm-4 col-form-label" for="alamat">Alamat</label>
+                <div class="col-sm-8">
+                    <textarea class="form-control" id="alamat" name="alamat" rows="3" ></textarea>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-sm-4 col-form-label" for="bayar">Pembayaran</label>
+                <div class="col-sm-8">
+                  <input type="radio" name="bayar" id="bayarCash" value="Cash">
+                  <label for="bayarCash">Cash</label>
+                  <input type="radio" name="bayar" id="bayarCredit" value="Credit">
+                  <label for="bayarCredit">Credit</label>
+                </div>
+            </div>
+                <div class="form-group row">
+                  <label class="col-sm-4 col-form-label">Kategori</label>
+                  <div class="col-sm-8">
+                   <select class="form-control" for="kategori">
+                    <option>Komputer</option>
+                    <option>Keyboard</option>
+                    <option>Mouse</option>
+                   </select>
+                  </div>
+              </div>
+              <div class="form-group row">
+                <button class="btn btn-primary form-control" type="submit">Kirim</button>
+            </div>
+        </div>
+         </form>
+      </div>
+     
+      </div>
+      <script src="js/bootstrap.bundle.js"></script>
 </body>
 </html>

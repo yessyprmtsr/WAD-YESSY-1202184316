@@ -1,0 +1,23 @@
+body{
+    background-color: whitesmoke;
+}
+.container{
+    margin-top: 40px;
+}
+.c-video{
+    background-color: gainsboro;
+    padding: 60px;
+    height: 450px;
+}
+iframe{
+    margin-top: 60px ;
+}
+h3{
+    padding-top: 10px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.c-registform{
+    float: right;
+    background-color: white;
+}
