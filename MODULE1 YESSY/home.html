@@ -1,87 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Home</title>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script type="text/javascript" src="js/bootstrap.js"></script>
-</head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-          <a class="navbar-brand" href="#">
-            <img src="image/logo-ead.png" width=100 height="30">
-          </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="home.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="profile.html">Profile</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="products.html">Products</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      <div class="container">
-        <div class="row">
-            <div class="col-lg-6 col-sm-12 c-video">
-                <iframe frameborder="0" height="70%" src="https://www.youtube.com/embed/AwMeQJ_u73I" width="100%"></iframe>
-            </div>
-            <div class="col-lg-6 col-sm-12 c-registform">
-            <h3>Customer Data Registration</h3>
-            <form action="">
-              <div class="form-group row">
-                <label for="name" class="col-sm-4 col-form-label text-center">Name</label>
-                <div class="col-sm-6">
-                  <input type="text" class="form-control" id="name" name="name" placeholder="Your name ..">
-                </div>  
-              </div>
-              <div class="form-group row">
-                <label for="phone" class="col-sm-4 col-form-label text-center">Phone</label>
-                <div class="col-sm-6">
-                  <input type="text" class="form-control" id="phone" name="phone">
-                </div>  
-              </div>
-              <div class="form-group row">
-                <label class="col-sm-4 col-form-label text-center" for="address">Address</label>
-                <div class="col-sm-6">
-                    <textarea class="form-control" id="address" name="address" rows="3" ></textarea>
-                </div>
-              </div>
-              <div class="form-group row">
-                <label class="col-sm-4 col-form-label text-center" for="payment">Payment</label>
-                <div class="col-sm-6">
-                  <input type="radio" name="pay" id="paymentCash" value="Cash">
-                  <label for="bayarCash">Cash</label>
-                  <input type="radio" name="pay" id="paymentCredit" value="Credit">
-                  <label for="paymentCredit">Credit</label>
-                </div>
-            </div>
-                <div class="form-group row">
-                  <label class="col-sm-4 col-form-label text-center">Category</label>
-                  <div class="col-sm-6">
-                   <select class="form-control" for="category">
-                    <option>Keyboard</option>
-                    <option>Computer</option>
-                    <option>Mouse</option>
-                   </select>
-                  </div>
-              </div>
-              <div class="form-group">
-                <div class="col-sm-12">
-                <button class="btn btn-primary" type="submit">Send</button>
-              </div>
-              </div>
-        </div>
-         </form>
-      </div>
 
+<head>
+  <title>Home</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+</head>
+
+<body>
+  <!-- untuk nav -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">
+      <img src="image/logo-ead.png" width=100 height="30">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="home.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="profile.html">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="products.html">Products</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- untuk isi -->
+  <div class="container">
+    <div class="row">
+      <!-- untuk video -->
+      <div class="col-lg-6 col-sm-12 c-video">
+        <iframe frameborder="0" height="70%" src="https://www.youtube.com/embed/AwMeQJ_u73I" width="100%"></iframe>
       </div>
+      <!-- untuk form -->
+      <div class="col-lg-6 col-sm-12 c-registform">
+        <h3>Customer Data Registration</h3>
+        <form action="">
+          <div class="form-group row">
+            <label for="name" class="col-sm-4 col-form-label text-center">Name</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" id="name" name="name" placeholder="Your name ..">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="phone" class="col-sm-4 col-form-label text-center">Phone</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" id="phone" name="phone">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-sm-4 col-form-label text-center" for="address">Address</label>
+            <div class="col-sm-6">
+              <textarea class="form-control" id="address" name="address" rows="3"></textarea>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-sm-4 col-form-label text-center" for="payment">Payment</label>
+            <div class="col-sm-6">
+              <input type="radio" name="pay" id="paymentCash" value="Cash">
+              <label for="bayarCash">Cash</label>
+              <input type="radio" name="pay" id="paymentCredit" value="Credit">
+              <label for="paymentCredit">Credit</label>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-sm-4 col-form-label text-center">Category</label>
+            <div class="col-sm-6">
+              <select class="form-control" for="category">
+                <option>Keyboard</option>
+                <option>Computer</option>
+                <option>Mouse</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-12">
+              <button class="btn btn-primary" type="submit">Send</button>
+            </div>
+          </div>
+      </div>
+      </form>
+    </div>
+
+  </div>
 </body>
+
 </html>

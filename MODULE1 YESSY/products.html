@@ -1,103 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title>Products</title>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script type="text/javascript" src="js/bootstrap.js"></script>
+  <title>Products</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script type="text/javascript" src="js/bootstrap.js"></script>
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">
-          <img src="image/logo-ead.png" width=100 height="30">
-        </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="home.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="profile.html">Profile</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="products.html">Products</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <div class="container">
-        <h3 class="text-center">Stock List</h3>
-            <div class="justify-content-center row">
-                <table class="table table-bordered table-striped" style="width: auto;">
-                    <thead>
-                    <tr>
-                        <th class="align-middle" rowspan="2">Stock Availibility</th>
-                        <th class="align-middle" rowspan="2">Stock Name</th>
-                        <th class="align-middle" colspan="3">Stock Detail</th>  
-                    </tr>
-                    <tr>
-                        <th>Brand</th>
-                        <th>Type</th>
-                        <th>Price</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td rowspan="5">Ready Stock</td>
-                            <td>All-in-One 24-f0051d [3JV73AA]</td>
-                            <td>HP</td>
-                            <td>Computer</td>
-                            <td>Rp. 11.358.000</td>
-                        </tr>
-                        <tr>
-                            <td>All-in-One V222UAK-BA341T [90PT0261-M00240]</td>
-                            <td>ASUS</td>
-                            <td>Computer</td>
-                            <td>Rp. 8.099.000</td>            
-                        </tr>
-                        <tr>
-                            <td>Bluetooth Multi-Device Keyboard K480 - Black [920-006380]</td>
-                            <td>Logitech</td>
-                            <td>Keyboard</td>
-                            <td>Rp. 470.000</td>
-                        </tr>
-                        <tr>
-                            <td>Wireless Keyboard and Mouse KM6363 - Black</td>
-                            <td>Dell</td>
-                            <td>Keyboard</td>
-                            <td>Rp.399.000</td>
-                        </tr>
-                        <tr>
-                            <td>Wireless Mouse M238 Fan Collection - England [910-005407]</td>
-                            <td>Logitech</td>
-                            <td>Mouse</td>
-                            <td>Rp. 175.000</td>
-                        </tr>
-                        <tr>
-                            <td rowspan="3">Sold Out</td>
-                            <td>All-in-One IdeaCentre AIO520-22IKL [F0D4005MID]</td>
-                            <td>Lenovo</td>
-                            <td>Computer</td>
-                            <td>Rp. 10.850.000</td>
-                        </tr>          
-                        <tr>
-                            <td>M590 Multi Device Silent Wireless Mouse [910-005205]</td>
-                            <td>Logitech</td>
-                            <td>Mouse</td>
-                            <td>Rp. 394.000</td>
-                        </tr>
-                        <tr>
-                            <td>Smart Keyboard iPad Pro 10.5 inch [MPTL27A/A]</td>
-                            <td>Apple</td>
-                            <td>Keyboard</td>
-                            <td>Rp. 3.000.800</td>
-                        </tr>
-                    </tbody>
-            </div>
+  <!-- untuk nav -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">
+      <img src="image/logo-ead.png" width=100 height="30">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="home.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="profile.html">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="products.html">Products</a>
+        </li>
+      </ul>
     </div>
-    
+  </nav>
+  <!-- untuk tabel -->
+  <div class="container">
+    <h3 class="text-center">Stock List</h3>
+    <div class="justify-content-center row">
+      <table class="table table-bordered table-striped" style="width: auto;">
+        <thead>
+          <tr>
+            <th class="align-middle" rowspan="2">Stock Availibility</th>
+            <th class="align-middle" rowspan="2">Stock Name</th>
+            <th class="align-middle" colspan="3">Stock Detail</th>
+          </tr>
+          <tr>
+            <th>Brand</th>
+            <th>Type</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="5">Ready Stock</td>
+            <td>All-in-One 24-f0051d [3JV73AA]</td>
+            <td>HP</td>
+            <td>Computer</td>
+            <td>Rp. 11.358.000</td>
+          </tr>
+          <tr>
+            <td>All-in-One V222UAK-BA341T [90PT0261-M00240]</td>
+            <td>ASUS</td>
+            <td>Computer</td>
+            <td>Rp. 8.099.000</td>
+          </tr>
+          <tr>
+            <td>Bluetooth Multi-Device Keyboard K480 - Black [920-006380]</td>
+            <td>Logitech</td>
+            <td>Keyboard</td>
+            <td>Rp. 470.000</td>
+          </tr>
+          <tr>
+            <td>Wireless Keyboard and Mouse KM6363 - Black</td>
+            <td>Dell</td>
+            <td>Keyboard</td>
+            <td>Rp.399.000</td>
+          </tr>
+          <tr>
+            <td>Wireless Mouse M238 Fan Collection - England [910-005407]</td>
+            <td>Logitech</td>
+            <td>Mouse</td>
+            <td>Rp. 175.000</td>
+          </tr>
+          <tr>
+            <td rowspan="3">Sold Out</td>
+            <td>All-in-One IdeaCentre AIO520-22IKL [F0D4005MID]</td>
+            <td>Lenovo</td>
+            <td>Computer</td>
+            <td>Rp. 10.850.000</td>
+          </tr>
+          <tr>
+            <td>M590 Multi Device Silent Wireless Mouse [910-005205]</td>
+            <td>Logitech</td>
+            <td>Mouse</td>
+            <td>Rp. 394.000</td>
+          </tr>
+          <tr>
+            <td>Smart Keyboard iPad Pro 10.5 inch [MPTL27A/A]</td>
+            <td>Apple</td>
+            <td>Keyboard</td>
+            <td>Rp. 3.000.800</td>
+          </tr>
+        </tbody>
+    </div>
+  </div>
+
 </body>
+
 </html>
