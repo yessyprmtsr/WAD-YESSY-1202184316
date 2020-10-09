@@ -36,26 +36,28 @@
     </div>
     <div class="form-group">
         <label for="roomtype">Room Type</label>
+        <!-- booking from home -->
         <?php
-                    if(isset($_POST['buttonBook1'])){
-                        echo '<select class="custom-select mr-sm-2" id="room" disabled>';
+        
+                    if(isset($_POST['Book1'])){
+                        echo '<select class="custom-select" name="roomtype" disabled>';
                         echo '<option value="standard">Standard</option>';
-                        echo '<input type="hidden" name="room" value="standard">';
+                        echo '<input type="hidden" name="roomtype" value="standard">';
                         echo '</select>';
-                    }else if(isset($_POST['buttonBook2'])){
-                        echo '<select class="custom-select mr-sm-2" name="room" id="room" disabled>';
+                    }else if(isset($_POST['Book2'])){
+                        echo '<select class="custom-select" name="roomtype" disabled>';
                         echo '<option value="superior">Superior</option>';
-                        echo '<input type="hidden" name="room" value="superior">';
+                        echo '<input type="hidden" name="roomtype" value="superior">';
                         echo '</select>';
-                    }else if(isset($_POST['buttonBook3'])){
-                        echo '<select class="custom-select mr-sm-2" name="room" id="room" disabled>';
+                    }else if(isset($_POST['Book3'])){
+                        echo '<select class="custom-select" name="roomtype" disabled>';
                         echo '<option value="luxury">Luxury</option>';
-                        echo '<input type="hidden" name="room" value="luxury">';
+                        echo '<input type="hidden" name="roomtype" value="luxury">';
                         echo '</select>';
                     }
+                    //for booking from booking navbar
                     else{
-                        echo '<select class="custom-select mr-sm-2" name="room" id="room>';
-                        echo '<option value="standard">Standard</option>';
+                        echo '<select class="custom-select" name="roomtype">';
                         echo '<option value="standard">Standard</option>';
                         echo '<option value="superior">Superior</option>';
                         echo '<option value="luxury">Luxury</option>';
@@ -71,7 +73,7 @@
         <label class="form-check-label" for="defaultCheck1">
                 Room Service
         </label>
-        <br>
+        <br/>
         <input class="form-check-input" type="checkbox" name="service[]" value="Breakfast" id="defaultCheck2">
         <label class="form-check-label" for="defaultCheck2">
                Breakfast
@@ -88,12 +90,13 @@
     </form>
     </div>
     <div class="col-lg-6">
+        <!-- for image -->
          <?php
-            if(isset($_POST['buttonBook1'])){
+            if(isset($_POST['Book1'])){
                 echo '<img src="image/hotels.jpg" style="margin-top:50px" width="600px" height="400px">';
-                } else if(isset($_POST['buttonBook2'])){
+                } else if(isset($_POST['Book2'])){
                     echo '<img src="image/hotelsup.jpg" style="margin-top:50px" width="600px" height="400px">';
-                } else if(isset($_POST['buttonBook3'])){
+                } else if(isset($_POST['Book3'])){
                     echo '<img src="image/hotellux.jpg" style="margin-top:50px" width="600px" height="400px">';
                 } else{
                     echo '<img src="image/hotel.jpg" style="margin-top:50px" width="600px" height="400px">';

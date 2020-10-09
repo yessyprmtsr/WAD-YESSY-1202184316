@@ -6,29 +6,29 @@
 </head>
 <body>
     <?php
-    if(isset($_POST['name'])){
+    //for post
     $name = $_POST['name'];
     $checkin = $_POST['checkin'];
+    $roomtype = $_POST['roomtype'];
+    $number = $_POST['number'];
     $duration = $_POST['duration'];
     $checkout = date('Y-m-d', strtotime('+'.$duration.'day', strtotime($checkin)));
-    $room = $_POST['room'];
-    $number = $_POST['number'];
+  
     //for total
-    if($room == 'standard'){
+    if($roomtype == 'standard'){
       $totalPrice = $duration*90;
-    } else if($room == 'superior'){
+    } else if($roomtype == 'superior'){
       $totalPrice = $duration*150;
-    } else if($room == 'luxury'){
+    } else if($roomtype == 'luxury'){
       $totalPrice = $duration*200;
     }
     //for services
       if(isset($_POST['service'])){
         $service = $_POST['service'];
-        $totalFinalPrice = $totalPrice + (20*count($service));
+        $totalFinalPrice = $totalPrice+(20*count($service));
       } else {
         $totalFinalPrice = $totalPrice;
       }
-    }
     ?>
 <nav class="navbar navbar-expand-lg navbar-info bg-info align-center">
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -59,6 +59,7 @@
   </thead>
     <tbody>
     <tr>
+      <!-- random -->
       <th scope="row">
         <?php
           echo(rand());
@@ -67,9 +68,10 @@
       <td><?= $name?> </td>
       <td><?= $checkin?></td>
       <td><?= $checkout?></td>
-      <td><?= $room?></td>
+      <td><?= $roomtype?></td>
       <td><?= $number?></td>
       <td>
+        <!-- for checkbox -->
         <?php
               if(!empty($_POST['service'])){
                   echo "<ul>";

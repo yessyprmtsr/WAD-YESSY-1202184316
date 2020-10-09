@@ -37,7 +37,7 @@
                 <li class="list-group-item">1 Bathroom</li>
             </ul>
             <div class="card-footer" style="text-align: center;">
-            <button name="buttonBook1" class="btn btn-primary">Book Now</button>
+            <button name="Book1" class="btn btn-primary">Book Now</button>
             </div>
         </div>
         </div>
@@ -57,7 +57,7 @@
                 <li class="list-group-item">1 Bathroom with hot water</li>
             </ul>
             <div class="card-footer" style="text-align: center;">
-            <button name="buttonBook2" class="btn btn-primary">Book Now</button>
+            <button name="Book2" class="btn btn-primary">Book Now</button>
             </div>
         </div>
         </div>
@@ -79,7 +79,7 @@
                 <li class="list-group-item">1 Workroom</li>
             </ul>
             <div class="card-footer" style="text-align: center;">
-            <button name="buttonBook3" class="btn btn-primary">Book Now</button>
+            <button name="Book3" class="btn btn-primary">Book Now</button>
             </div>
         </div>
         </div>
