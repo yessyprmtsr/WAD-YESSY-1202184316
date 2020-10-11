@@ -21,11 +21,13 @@
       $totalPrice = $duration*150;
     } else if($roomtype == 'luxury'){
       $totalPrice = $duration*200;
+    } else {
+      echo 'No Room Selected';
     }
     //for services
       if(isset($_POST['service'])){
         $service = $_POST['service'];
-        $totalFinalPrice = $totalPrice+(20*count($service));
+        $totalFinalPrice = ($totalPrice+(20*count($service)));
       } else {
         $totalFinalPrice = $totalPrice;
       }
