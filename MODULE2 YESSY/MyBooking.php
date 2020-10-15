@@ -64,7 +64,7 @@
       <!-- random -->
       <th scope="row">
         <?php
-          echo(rand());
+          echo(rond());
         ?>
       </th>
       <td><?= $name?> </td>
@@ -86,7 +86,7 @@
               }
         ?>
       </td>
-      <td>$<?= $totalFinalPrice?></td>
+      <td>$<?= $totalFinalPrce?></td>
     </tr>
     </tbody>
     </table>
