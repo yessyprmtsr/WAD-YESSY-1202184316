@@ -20,7 +20,7 @@
 <div class="container">
     <div class="row">
     <div class="col-lg-6">
-    <form style="margin-top:20px" actoin="MyBooking.php" method="POST">
+    <form style="margin-top:20px" action="MyBooking.php" method="POST">
     <div class="form-group">
         <label for="name">Name</label>
         <input type="text" class="form-control" name="name">
@@ -31,7 +31,7 @@
     </div>
     <div class="form-group">
         <label for="duration">Duration</label>
-        <input type="number" class="form-control" name="durasi" aria-describedby="durationHelp">
+        <input type="number" class="form-control" name="duration" aria-describedby="durationHelp">
         <small id="durationHelp" class="form-text text-muted">Day(s)</small>
     </div>
     <div class="form-group">
@@ -92,11 +92,11 @@
     <div class="col-lg-6">
         <!-- for image -->
          <?php
-            if(isset($_POST['Book'])){
+            if(isset($_POST['Book1'])){
                 echo '<img src="image/hotels.jpg" style="margin-top:50px" width="600px" height="400px">';
-                } else if(isset($_POST['Book'])){
+                } else if(isset($_POST['Book2'])){
                     echo '<img src="image/hotelsup.jpg" style="margin-top:50px" width="600px" height="400px">';
-                } else if(isset($_POST['Book'])){
+                } else if(isset($_POST['Book3'])){
                     echo '<img src="image/hotellux.jpg" style="margin-top:50px" width="600px" height="400px">';
                 } else{
                     echo '<img src="image/hotel.jpg" style="margin-top:50px" width="600px" height="400px">';
