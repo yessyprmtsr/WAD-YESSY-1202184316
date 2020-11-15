@@ -79,7 +79,7 @@ $benefitEvent = explode(',', $eventDetail['benefit']);
                             
                         </div>
                         <div class="card-footer text-center">
-                            <button type="button" href="#" class="btn btn-primary pr-md-5 pl-sm-5" data-toggle="modal" data-target="#editModal">Edit</button>
+                            <button type="button" href="#" class="btn btn-primary" data-toggle="modal" data-target="#editModal">Edit</button>
                             <button  class="btn btn-danger"><a href="delete.php?id=<?= $eventDetail["id"]; ?>" style="color:white;">Delete</a></button>
                         </div>
                         <!-- modal edit -->
