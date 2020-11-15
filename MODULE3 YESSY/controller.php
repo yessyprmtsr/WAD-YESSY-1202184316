@@ -33,7 +33,7 @@ function uploadEventGambar(){
     move_uploaded_file($_FILES['gambar']['tmp_name'],'assets/image/'. $filename);
     return $filename;
 }
-//select gambar
+//select data
 function read($query){
         global $koneksi;
         $result = mysqli_query($koneksi, $query);
@@ -43,7 +43,7 @@ function read($query){
         }
         return $datas;
 }
-//update gambar
+//update data
 function edit($data){
     global $koneksi;
     $id = $data['id'];
@@ -79,7 +79,7 @@ function edit($data){
     mysqli_query($koneksi, $query);
     return mysqli_affected_rows($koneksi);
 }
-//delete gambar
+//delete data
 function delete($id){
     global $koneksi;
     mysqli_query($koneksi, "DELETE FROM event_table WHERE id=$id");
