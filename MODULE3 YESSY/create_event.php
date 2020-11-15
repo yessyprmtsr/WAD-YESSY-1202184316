@@ -1,20 +1,18 @@
 <?php
 require 'controller.php';
 if(isset($_POST["submit"])){
-
-if(create($_POST)>0){
+if(create($_POST) > 0){
     echo "
-        <script>
-            alert('Event telah ditambahkan!');
-        </script>
-        
+    <div class='alert alert-success'>
+    <strong>Success!</strong> Data successfully has been created.
+    </div>
     ";
     header("location:home.php");
 }else{
     echo "
-        <script>
-            alert('Event gagal ditambahkan!!');
-        </script>
+    <div class='alert alert-danger'>
+    <strong>Success!</strong> Data failed to created.
+    </div>
     ";
 }
 }
@@ -25,16 +23,20 @@ if(create($_POST)>0){
 <head>
     <title>Home</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
 <body>
 
 <nav class="navbar navbar-dark bg-primary">
     <a class="navbar-brand">EAD EVENTS</a>
     <div class="form-inline">
-        <a class="nav-link" href="#" style="color:white;">Home</a>
+        <a class="nav-link" href="home.php" style="color:white;">Home</a>
         <a class="btn btn-outline-light" href="create_event.php" type="submit">Buat Event</a>
     </div>
 </nav>
+<!-- form kontainer -->
 <div class="container">
     <h4 style="color: dodgerblue;margin-top:20px">Buat Event!</h4>
     <div class="row">
@@ -50,13 +52,13 @@ if(create($_POST)>0){
                             </div>
                             <div class="form-group">
                                 <label><b>Deskripsi</b></label>
-                                <textarea class="form-control" name="deskripsi" rows="4"></textarea>
+                                <textarea class="form-control" name="deskripsi" rows="3"></textarea>
                             </div>
                             <div class="form-group">
                                 <label><b>Upload Gambar</b></label>
                                 <div class="custom-file">
-                                    <input type="file" class="custom-file-input" name="gambar">
-                                    <label class="custom-file-label"></label>
+                                <input type="file" class="custom-file-input" name="gambar" id="inputGroupFile02">
+                                    <label class="custom-file-label" for="inputGroupFile02"></label>
                                 </div>
                             </div>
                             <div>
@@ -127,6 +129,13 @@ if(create($_POST)>0){
             </form>
             </div>
 </div>
-
+<script>
+    $('#inputGroupFile02').on('change',function(){
+        //get the file name
+        var fileName = $(this).val();
+        //replace the "Choose a file" label
+        $(this).next('.custom-file-label').html(fileName);
+            })
+    </script>
 </body>
 </html>

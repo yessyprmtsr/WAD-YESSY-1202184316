@@ -1,6 +1,7 @@
 <?php
+//untuk koneksi ke db
 $koneksi = mysqli_connect('localhost','root','','wad_module3_yessy');
-
+//insert data
 function create($data){
     global $koneksi;
     $nama = $data["nama"];
@@ -19,6 +20,7 @@ function create($data){
     mysqli_query($koneksi, $query);
     return mysqli_affected_rows($koneksi);
 }
+//upload gambar
 function uploadEventGambar(){
     $extensi = ['jpg','jpeg','png'];
     $filename = $_FILES['gambar']['name'];
@@ -30,8 +32,8 @@ function uploadEventGambar(){
     }
     move_uploaded_file($_FILES['gambar']['tmp_name'],'assets/image/'. $filename);
     return $filename;
-
 }
+//select gambar
 function read($query){
         global $koneksi;
         $result = mysqli_query($koneksi, $query);
@@ -41,9 +43,43 @@ function read($query){
         }
         return $datas;
 }
+//update gambar
 function edit($data){
-
+    global $koneksi;
+    $id = $data['id'];
+    $nama = $data["nama"];
+    $deskripsi = $data["deskripsi"];
+    $oldGambar = $data["oldGambar"];
+    //cek gambar
+    //4 tidak ada gambar
+    if($_FILES['gambar']['error'] === 4){
+        $gambar = $oldGambar;
+    } else {
+        $gambar = uploadEventGambar();
+    }
+    $kategori = $data["kategori"];
+    $tanggal = $data["tanggal"];
+    $mulai = $data["mulai"];
+    $berakhir = $data["berakhir"];
+    $tempat = $data["tempat"];
+    $harga = $data["harga"];
+    $benefit = implode(", ",$data["benefit"]);
+    $query = "UPDATE event_table SET 
+    nama = '$nama',
+    deskripsi = '$deskripsi',
+    gambar = '$gambar',
+    kategori = '$kategori',
+    tanggal = '$tanggal',
+    mulai = '$mulai',
+    berakhir = '$berakhir',
+    tempat = '$tempat',
+    harga = '$harga',
+    benefit = '$benefit'
+    WHERE id = '$id'";
+    mysqli_query($koneksi, $query);
+    return mysqli_affected_rows($koneksi);
 }
+//delete gambar
 function delete($id){
     global $koneksi;
     mysqli_query($koneksi, "DELETE FROM event_table WHERE id=$id");

@@ -29,19 +29,19 @@ $eventHome = read("SELECT * FROM event_table");
     ?>
     <div class="row">
     <?php
-            foreach($eventHome as $row):
+            foreach($eventHome as $data):
         ?>
-        <div class="col">
+        <div class="col-lg-4">
             <div class="card"style="width: 18rem;">
-                <img src="assets/image/<?= $row["gambar"]; ?>" class="card-img-top" width="50" height="200">
+                <img src="assets/image/<?= $data["gambar"]; ?>" class="card-img-top" width="50" height="200">
                 <div class="card-body">
-                    <h4><?= $row["name"]; ?></h4><br>
-                    <p><i class="fa fa-calendar" aria-hidden="true" style="color: orange;"></i>&nbsp;<?= $row["tanggal"]; ?> </p>
-                    <p><i class="fa fa-map-marker" aria-hidden="true" style="color: orange;"></i>&nbsp;<?= $row["tempat"]; ?></p>
-                    <p> Kategori : <?= $row["kategori"]; ?></p>
+                    <h4><?= $data["nama"]; ?></h4><br>
+                    <p><i class="fa fa-calendar" aria-hidden="true" style="color: orange;"></i>&nbsp;<?= $data["tanggal"]; ?> </p>
+                    <p><i class="fa fa-map-marker" aria-hidden="true" style="color: orange;"></i>&nbsp;<?= $data["tempat"]; ?></p>
+                    <p> Kategori : <?= $data["kategori"]; ?></p>
                 </div>
                 <div class="card-footer">
-                <button type="button" class="btn btn-primary float-right"><a href="detail.php?id=<?= $row["id"]; ?>" style="color:white;">Detail</a></button>
+                <button type="button" class="btn btn-primary float-right"><a href="detail.php?id=<?= $data["id"]; ?>" style="color:white;">Detail</a></button>
                 </div>
                 
             </div>

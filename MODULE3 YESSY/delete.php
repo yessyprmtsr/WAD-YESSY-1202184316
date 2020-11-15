@@ -1,20 +1,21 @@
 <?php
 require 'controller.php';
-$id = $_GET['id'];
-//untuk hapus
+$id = $_GET["id"];
 if(delete($id) > 0){
-    echo "<script>
-        alert('Data telah dihapus!');
+    echo "
+    <div class='alert alert-success'>
+    <strong>Success!</strong> Data successfully has been deleted.
+    </div>
+    <script>
         document.location.href = 'home.php';
-    </script>
-";
+    </script>";
 }else{
     echo "
+    <div class='alert alert-danger'>
+    <strong>Failed!</strong> Data failed deleted.
+    </div>
     <script>
-        alert('Data belum dihapus!');
-        document.location.href = 'Home.php';
-    </script>
-";
+        document.location.href = 'home.php';
+    </script>";
 }
-
 ?>
