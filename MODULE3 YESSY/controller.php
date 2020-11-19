@@ -1,6 +1,7 @@
 <?php
 //untuk koneksi ke db
-$koneksi = mysqli_connect('localhost','root','','wad_module3_yessy');
+$koneksi = mysqli_connect('localhost','root','','int-yessy');
+
 //insert data
 function create($data){
     global $koneksi;

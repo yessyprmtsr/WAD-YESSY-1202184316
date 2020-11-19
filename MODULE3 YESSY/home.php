@@ -1,6 +1,6 @@
 <?php
 require 'controller.php';
-$eventHome = read("SELECT * FROM event_table");
+$eventHome = read("SELECT * FROM event_tabel");
 ?>
 <!DOCTYPE html>
 <html lang="en">

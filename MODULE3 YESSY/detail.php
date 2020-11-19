@@ -190,7 +190,7 @@ $benefitEvent = explode(',', $eventDetail['benefit']);
                     </div>
                         <div class="modal-footer">
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-                        <button type="submit" class="btn btn-primary" name="submit">Save changes</button>
+                        <button type="button" class="btn btn-primary" name="submit">Save changes</button>
                         </div>
                     </form>
                     </div>

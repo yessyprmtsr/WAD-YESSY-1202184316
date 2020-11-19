@@ -1,5 +1,5 @@
 <?php
-require 'controller.php';
+require 'controler.php';
 $id = $_GET["id"];
 if(delete($id) > 0){
     echo "
