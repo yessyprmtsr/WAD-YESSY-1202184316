@@ -29,19 +29,26 @@ if (isset($_POST['submit'])) {
   $nama = $_POST['nama'];
   $email = $_POST['email'];
   $phone = $_POST['phone'];
-  $password = password_hash($_POST['password'],PASSWORD_DEFAULT);
+  $password = $_POST['password'];
   $confirmPassword = $_POST['confirmPassword'];
-  
-  if ($database->register($nama,$email,$phone,$password)) {
-      echo 
-      "<div class='alert alert-warning'>
-      <strong>Success!</strong> Berhasil Register.
-      </div>";
-      echo "<script>setTimeout(function() {window.location.href='login.php'}, 500);</script>";
-  } else {
-      echo "<div class='alert alert-danger'>
-      <strong>Failed!</strong> Gagal Registrasi.
-      </div>";
+  if($password==$confirmPassword){
+    $password = password_hash($password, PASSWORD_DEFAULT);
+    if ($database->register($nama,$email,$phone,$password)) 
+    {
+        echo "  <div class='alert alert-warning'>
+        <strong>Success!</strong> Berhasil Registrasi.
+        </div>";
+        echo "<script>setTimeout(function() {window.location.href='profile.php'}, 1000);</script>";
+    }else{
+
+        echo "<div class='alert alert-danger'>
+        <strong>Failed!</strong> Gagal Registrasi.
+        </div>"; 
+    }
+    }else{
+    echo "<div class='alert alert-danger'>
+    <strong>Failed!</strong> Password not same.
+    </div>";
     }
   }
 ?>
