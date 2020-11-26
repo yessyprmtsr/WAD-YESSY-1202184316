@@ -3,7 +3,7 @@ session_start();
 include_once('controller.php');
 $database = new database();
 //session index
-if(!isset($_SESSION['login'])) {
+if(!isset($_SESION['login'])) {
   header('location:login.php');
 }
 $nama = $_SESSION['nama']; 

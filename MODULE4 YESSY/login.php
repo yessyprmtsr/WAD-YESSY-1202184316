@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once('controller.php');
+include_once('controler.php');
 $database = new database();
 //for session in login
 if(isset($_SESSION['login'])) {
