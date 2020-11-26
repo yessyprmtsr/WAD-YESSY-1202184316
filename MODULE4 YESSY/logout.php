@@ -20,7 +20,7 @@
         session_start();
         $_SESSION = [];
         session_unset();
-        session_desroy();
+        session_destroy();
         //hapus cookie
         setcookie('email','',0,'/');
         setcookie('nama','',0,'/');

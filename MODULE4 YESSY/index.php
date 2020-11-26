@@ -1,5 +1,5 @@
 <?php
-session_star();
+session_start();
 //session index
 if(!isset($_SESSION['login'])) {
   header('location:login.php');
