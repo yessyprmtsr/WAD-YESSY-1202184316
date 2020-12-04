@@ -36,19 +36,22 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request,[
-            'img_path' => 'file|image',
-        ]);
+        $products = new Product();
+        $products->name = $request->input('name');
+        $products->price = $request->input('price');
+        $products->description = $request->input('description');
+        $products->stock = $request->input('stock');
         if($request->hasFile('img_path')){
-            $cover = $request->file('img_path')->store('public/images');
-         }
-         Product::create([
-            'name' => $request->name,
-            'price' => $request->price,
-            'description' => $request->description,
-            'stock' => $request->stock,
-            'img_path' => $cover,
-        ]);
+            $file = $request->file('img_path');
+            $extension = $file->getClientOriginalExtension();
+            $filename = time() . "." . $extension;
+            $file->move('uploads/image/',$filename);
+            $products->img_path = $filename;
+        } else {
+            return $request;
+            $products->img_path = "";
+        }
+        $products->save();
         return redirect()->route('products.index')->withSuccess('Products data has been saved');
     }
 
@@ -84,30 +87,24 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $products, $id)
     {
-    //simpan gambar
-    $this->validate($request,[
-        'img_path' => 'file|image',
-    ]);
-    $cover = $products->cover;
-    if($request->hasFile('img_path')){
-        $cover = $request->file('img_path')->store('public/images');
-     }
+   
      $products = Product::find($id);
      $products->name = $request->name;
      $products->price = $request->price;
      $products->description = $request->description;
      $products->stock = $request->stock;
-     $products->img_path = $cover;
+     if($request->hasFile('img_path')){
+        $file = $request->file('img_path');
+        $extension = $file->getClientOriginalExtension();
+        $filename = time() . "." . $extension;
+        $file->move('uploads/image/',$filename);
+        $products->img_path = $filename;
+    } else {
+        return $request;
+        $products->img_path = "";
+    }
      $products->save();
 
-
-    // $products->update([
-    //         'name' => $request->name,
-    //         'price' => $request->price,
-    //         'description' => $request->description,
-    //         'stock' => $request->stock,
-    //         'img_path' => $cover,
-    // ]);
     return redirect()->route('products.index');
     }
 

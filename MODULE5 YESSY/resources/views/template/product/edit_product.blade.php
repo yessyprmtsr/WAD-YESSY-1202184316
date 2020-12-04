@@ -28,7 +28,7 @@
     </div/>
     <div class="form-group">
         <label for="exampleFormControlFile1">Image file input</label>
-        <input type="file" name="img_path" class="form-control-file" id="exampleFormControlFile1" value="{{ $products->img_path }}">
+        <input type="file" name="img_path" class="form-control-file" id="exampleFormControlFile1" value="{{ $products->images }}">
     </div>
     <div class="form-group">
         <input type="submit" value="Submit" class="btn btn-dark" >

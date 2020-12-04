@@ -8,10 +8,10 @@
         <a class="nav-link" href="{{ route('products.index')}}" style="color: black">PRODUCT</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="Booking.php" style="color: black">ORDER</a>
+        <a class="nav-link" href="{{ route('orders.index')}}" style="color: black">ORDER</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="Booking.php" style="color: black">HISTORY</a>
+          <a class="nav-link" href="{{ route('history')}}" style="color: black">HISTORY</a>
           </li>
       </ul>
     </div>
