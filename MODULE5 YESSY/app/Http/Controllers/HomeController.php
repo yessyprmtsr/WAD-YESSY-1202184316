@@ -10,7 +10,7 @@ class HomeController extends Controller
     public function index(){
         return view('template.home');
     }
-    public function displayHistory(){
+    public function display(){
         $orders = Order::all();
         return view('template.history.index', ['orders' => $orders]);
     }

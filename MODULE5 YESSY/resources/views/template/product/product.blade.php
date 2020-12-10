@@ -26,7 +26,7 @@
         <td scope="col">{{ $item->name }}</td> 
         <td scope="col">{{ $item->price }}</td> 
         <td scope="col">
-        <a href="{{ route('products.edit',[$item->id])}}" class="btn btn-primary">Edit</a>
+        <a href="{{ route('products.update',[$items->id])}}" class="btn btn-primary">Edit</a>
         <form action="{{ route('products.destroy', [$item->id]) }}" method="POST" id="deleteForm">
         @csrf
         @method("DELETE")
